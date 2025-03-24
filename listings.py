@@ -1,8 +1,5 @@
-# python_script.py
 import requests
-import json
 import csv
-from urllib.parse import urljoin
 
 def get_data(address: str, latitude: float, longitude: float, page_size: int):
     """
@@ -52,6 +49,8 @@ def get_data(address: str, latitude: float, longitude: float, page_size: int):
                 # Safely get nested values with default empty dict/string
                 basic_data = result.get('basicPropertyData', {}) if result else {}
                 display_name = result.get('displayName', {}) if result else {}
+
+                # amount nested inside
                 price_display = result.get('priceDisplayInfoIrene', {}) if result else {}
                 display_price = price_display.get('displayPrice', {}) if price_display else {}
                 price_info = display_price.get('amountPerStay', {}) if display_price else {}

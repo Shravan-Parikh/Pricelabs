@@ -2,7 +2,7 @@
 
 require 'net/http'
 require 'json'
-requirgte 'csv'
+require 'csv'
 
 def get_data(address, latitude, longitude, pageSize)
   raise ArgumentError, 'Address must be a string' unless address.is_a?(String)
