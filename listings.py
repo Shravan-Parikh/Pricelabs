@@ -55,7 +55,7 @@ if __name__ == "__main__":
         #data = get_properties('Bangalore', 20, lat=12.9716, lng=77.5946)
         
         # Example usage without coordinates
-        data = get_properties('LAS VEGAS', 2000)
+        data = get_properties('LAS VEGAS', 45)
         
         save_to_csv(data)
 

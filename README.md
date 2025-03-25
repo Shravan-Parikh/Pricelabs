@@ -3,6 +3,7 @@
 ## Prerequisites
 - Python 3.7+ (for Python script)
 - pip (Python package manager)
+- [Excalidraw](https://excalidraw.com/#json=h0VknBxKw_mYkzSlLm8TI,IV77-Gsxe5o0pHgPK3EFRg) (for visual diagrams)
 
 ## Python Script Setup
 
@@ -30,6 +31,9 @@ pip install requests
 python listings.py
 ```
 
+## Visualize Your Workflow
+- [Open Excalidraw Diagram](https://excalidraw.com/) to create visual representations of your script's workflow or architecture
+
 ## Troubleshooting
 - Ensure you have Python installed
 - Check that you're using compatible versions
@@ -38,3 +42,4 @@ python listings.py
 
 ## Notes
 - The Python script requires the `requests` library
+- Use Excalidraw for creating visual documentation and flowcharts
