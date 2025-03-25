@@ -24,7 +24,7 @@ def get_data(address: str, latitude: float, longitude: float, page_size: int):
         raise ValueError('Latitude and longitude must be float values')
 
     api_url = 'https://www.booking.com/dml/graphql'
-    query_params = build_query_params(address)
+    #query_params = build_query_params(address)
     headers = build_headers()
     request_body = build_request_body(address, latitude, longitude, page_size)
     
@@ -33,7 +33,7 @@ def get_data(address: str, latitude: float, longitude: float, page_size: int):
             api_url, 
             headers=headers, 
             json=request_body,
-            params=query_params
+            #params=query_params
         )
         response.raise_for_status()
         
@@ -145,8 +145,8 @@ def build_request_body(address: str, latitude: float, longitude: float, page_siz
                 "acidCarouselContext": None,
                 "childrenAges": [],
                 "dates": {
-                    "checkin": "2024-06-18",
-                    "checkout": "2024-06-19"
+                    "checkin": "2025-03-25",
+                    "checkout": "2025-03-26"
                 },
                 "doAvailabilityCheck": False,
                 "encodedAutocompleteMeta": None,
@@ -227,8 +227,8 @@ def build_request_body(address: str, latitude: float, longitude: float, page_siz
 if __name__ == "__main__":
     try:
         # Example usage with coordinates for Bangalore
-        #get_data('Bangalore', 12.9716, 77.5946, 20)
-        get_data('Chicago', 41.8804017, -87.6302038, 20)
+        get_data('Bangalore', 12.9716, 77.5946, 20)
+        #get_data('Chicago', 41.8804017, -87.6302038, 20)
         print("Successfully fetched and saved data.")
     except Exception as e:
         print(f"An error occurred: {e}")
