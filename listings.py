@@ -52,13 +52,12 @@ def save_to_csv(listings, filename='listings.csv'):
 if __name__ == "__main__":
     try:
         # Example usage with coordinates
-        data = get_properties('Bangalore', 20, lat=12.9716, lng=77.5946)
+        #data = get_properties('Bangalore', 20, lat=12.9716, lng=77.5946)
         
         # Example usage without coordinates
-        #data = get_properties('Silvassa', 5)
+        data = get_properties('LAS VEGAS', 2000)
         
         save_to_csv(data)
 
-        
     except Exception as e:
         print(f"Error occurred: {str(e)}")

@@ -9,7 +9,7 @@
 ### 1. Set Up Virtual Environment
 ```bash
 # Create a virtual environment
-python3 -m venv venv
+python -m venv venv 
 
 # Activate the virtual environment
 # On Windows:
