@@ -25,7 +25,7 @@ def build_headers():
         'x-booking-topic': 'capla_browser_b-search-web-searchresults'
     }
 
-def build_search_body(address, page_size, lat=None, lng=None):
+def build_search_body(address, page_size, checkIn, checkOut,lat=None, lng=None):
     # Construct the location part based on provided inputs
     location = {"searchString": address}
     if lat and lng:
@@ -43,8 +43,8 @@ def build_search_body(address, page_size, lat=None, lng=None):
                 "acidCarouselContext": None,
                 "childrenAges": [],
                 "dates": {
-                    "checkin": "2025-03-25",
-                    "checkout": "2025-03-26"
+                    "checkin": checkIn,
+                    "checkout": checkOut
                 },
                 "doAvailabilityCheck": False,
                 "encodedAutocompleteMeta": None,
