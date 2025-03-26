@@ -17,13 +17,11 @@ def get_properties(address, page_size, lat=None, lng=None):
     
     data = fetch_from_api(API_URL, headers, payload)
     return extract_listing_data(data)
-import csv
 
 def extract_listing_data(api_response):
-
-     """Extracts and formats listing data from API response"""
+    #Extracts and formats listing data from API response
     results = api_response.get('data', {}).get('searchQueries', {}).get('search', {}).get('results', [])
-    
+
     listings = []
     for result in results:
         # Get basic property info with default empty dict
@@ -40,10 +38,9 @@ def extract_listing_data(api_response):
             display_name.get('text', 'N/A'),  
             prop_data.get('pageName', 'N/A'), 
             amount_per_stay.get('amount', 'N/A'),  
-            
         ])
     
-    return listings
+    return listings  # Move this outside the for loop
 
 def save_to_csv(listings, filename='listings.csv'):
 
