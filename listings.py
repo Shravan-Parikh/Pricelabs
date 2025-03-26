@@ -40,7 +40,7 @@ def extract_listing_data(api_response):
             amount_per_stay.get('amount', 'N/A'),  
         ])
     
-    return listings  # Move this outside the for loop
+    return listings 
 
 def save_to_csv(listings, filename='listings.csv'):
 
@@ -71,7 +71,7 @@ if __name__ == "__main__":
         #data = get_properties('Bangalore', 20, 12.9716, 77.5946) # lat and longitude
         
         # Example usage without coordinates
-        data = get_properties('Silvassa', 30) # withou lat long
+        data = get_properties('Silvassa', 30)
         
         save_to_csv(data)
 

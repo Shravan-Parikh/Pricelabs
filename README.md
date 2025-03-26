@@ -1,11 +1,15 @@
-# Listing Scripts Setup Guide
+
+## Project Structure
+- `listings.py`: Main script that handles property fetching and CSV generation
+- `api_client.py`: Contains API interaction logic and request builders
+- `test_listings.py`: Unit tests for the listings functionality
 
 ## Prerequisites
-- Python 3.7+ (for Python script)
+- Python 3.7+
 - pip (Python package manager)
-- [Excalidraw](https://excalidraw.com/#json=h0VknBxKw_mYkzSlLm8TI,IV77-Gsxe5o0pHgPK3EFRg) (for visual diagrams)
+- [Excalidraw](https://excalidraw.com/#json=WYxcXzQbYobms4SvIIWlQ,aPDHDAAvNGAC2_TZcGJBGQ) (for visual diagrams)
 
-## Python Script Setup
+## Setup 
 
 ### 1. Set Up Virtual Environment
 ```bash
@@ -21,25 +25,38 @@ source venv/bin/activate
 
 ### 2. Install Required Dependencies
 ```bash
-# Install requests library
-pip install requests
+pip install requests 
 ```
 
-### 3. Run the Python Script
+### 3. Run the Main Script
 ```bash
-# Run the listings script
 python listings.py
 ```
+This will generate a CSV file with property listings
 
-## Visualize Your Workflow
-- [Open Excalidraw Diagram](https://excalidraw.com/) to create visual representations of your script's workflow or architecture
+## Running Tests
 
-## Troubleshooting
-- Ensure you have Python installed
-- Check that you're using compatible versions
-- Verify internet connection for dependency installation
-- Make sure you're in the correct directory when running scripts
+### Using pytest (Recommended)
+```bash
+# Install pytest if not already installed
+pip install pytest
+
+# Run tests with verbose output
+pytest -v test_listings.py
+```
+
+### Using unittest
+```bash
+python -m unittest test_listings.py
+```
+
+## Test Coverage
+The test suite covers:
+- Input validation for address
+- Input validation for coordinates
+- Property fetching without coordinates
+- Property fetching with coordinates
 
 ## Notes
-- The Python script requires the `requests` library
-- Use Excalidraw for creating visual documentation and flowcharts
+- The script requires an active internet connection
+- CSV output will be generated in the same directory as the script
