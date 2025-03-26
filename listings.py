@@ -68,10 +68,11 @@ if __name__ == "__main__":
     try:
         # Example usage with coordinates
 
-        #data = get_properties('Bangalore', 20, 12.9716, 77.5946) # lat and longitude
+        #data = get_properties('Bangalore', 20, 12.9716, 77.5946) # with coordinates
         
         # Example usage without coordinates
-        data = get_properties('Silvassa', 30)
+        
+        data = get_properties('Dubai', 30) 
         
         save_to_csv(data)
 

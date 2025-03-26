@@ -1,4 +1,3 @@
-
 ## Project Structure
 - `listings.py`: Main script that handles property fetching and CSV generation
 - `api_client.py`: Contains API interaction logic and request builders
@@ -8,6 +7,12 @@
 - Python 3.7+
 - pip (Python package manager)
 - [Excalidraw](https://excalidraw.com/#json=WYxcXzQbYobms4SvIIWlQ,aPDHDAAvNGAC2_TZcGJBGQ) (for visual diagrams)
+
+![Simple Diagram](./public/diagram.png)
+
+## Demo & Documentation
+Watch the demo video to see the project in action:
+[🎥 Watch Demo on Loom](https://www.loom.com/share/f4da5485591547ff8e15992a63e45fed)
 
 ## Setup 
 
