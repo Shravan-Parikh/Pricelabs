@@ -11,8 +11,8 @@ def get_properties(address, page_size, lat=None, lng=None):
         raise ValueError('Coordinates must be float values')
     
     headers = build_headers()
-    checkIn = '2025-03-27'
-    checkOut = '2025-03-29'
+    checkIn = '2025-03-29'
+    checkOut = '2025-03-30'
     payload = build_search_body(address, page_size, checkIn, checkOut,lat, lng)
     
     data = fetch_from_api(API_URL, headers, payload)
